@@ -29,10 +29,10 @@ export default {
     },
     methods: {
         onAddWatcher() {
-            const id = Date.now() % 1000
+            const id = Date.now() % 100
             const watcher = {
                 id,
-                fullname: `watcher-${id}`,
+                fullname: `watcher${id}`,
                 profileImg: 'profile1.png'
             }
             this.watchers.unshift(watcher)
@@ -79,13 +79,15 @@ section {
         box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
         transition: transform 0.2s, box-shadow 0.2s;
 
+        .name {
+            max-width:80px ;
+        }
+
         &:hover {
             transform: translateY(-2px);
             box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
         }
     }
-
-
 }
 
 .movies {

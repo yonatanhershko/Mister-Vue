@@ -1,5 +1,5 @@
 <template>
-    <h1>{{ watcher.fullname }}</h1>
+    <h1 class="name">{{ watcher.fullname }}</h1>
     <img :src="`../src/assets/imgs/seasons/users/${watcher.profileImg}`" alt="">
 </template>
 <script>
