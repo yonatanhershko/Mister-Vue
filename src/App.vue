@@ -8,7 +8,7 @@
   </header>
 
   <Weather v-if="route === 'Weather'" />
-  <CountDown v-if="route === 'CountDown'" />
+  <CountDown  v-on:due="inHere"  v-if="route === 'CountDown'" />
 </template>
 
 <script>
@@ -22,12 +22,15 @@ export default {
 
   data() {
     return {
-      route: "Wgfhfgh",
+      route: "",
     };
   },
+  methods: {
+    inHere() {
+      console.log('hey mama')
+    }
+  }
 };
 </script>
 
-<style lang="scss">
-
-</style>
+<style lang="scss"></style>
